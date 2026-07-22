@@ -140,7 +140,7 @@ This architecture mirrors production environments:
 
 **1. Clone Repository**
 ```bash
-git clone https://github.com/yourusername/homelab-infrastructure
+git clone https://github.com/marcus-singleton/homelab-infrastructure
 cd homelab-infrastructure/traefik-reverse-proxy
 ```
 
@@ -162,7 +162,7 @@ cp docker-compose.yml.example docker-compose.yml
 cp .env.example .env
 
 # Edit files and replace:
-# - your-domain.com → your actual domain
+# - yourdomain.com → your actual domain
 # - your-email@example.com → your email
 # - 192.168.1.x → your network IPs
 # - Generate htpasswd hash for dashboard
@@ -184,7 +184,7 @@ docker logs traefik -f
 cat certs/acme.json | jq '.cloudflare.Certificates[] | .domain.main'
 
 # Access dashboard
-# https://traefik.your-domain.com
+# https://traefik.yourdomain.com
 ```
 
 ---
@@ -254,7 +254,7 @@ See [docs/05-troubleshooting.md](docs/05-troubleshooting.md) for detailed guide.
 http:
   routers:
     myservice:
-      rule: "Host(`myservice.your-domain.com`)"
+      rule: "Host(`myservice.yourdomain.com`)"
       service: myservice-service
       entryPoints:
         - https
@@ -365,7 +365,7 @@ This project demonstrates:
 - Problem-solving ability
 - Continuous learning mindset
 
-See my [complete portfolio](https://github.com/yourusername) for more projects.
+See my [complete portfolio](https://github.com/marcus-singleton) for more projects.
 
 ---
 
@@ -373,20 +373,9 @@ See my [complete portfolio](https://github.com/yourusername) for more projects.
 
 **⭐ Star this repo if you found it helpful!**
 
-**🔗 [View Project](https://github.com/yourusername/homelab-infrastructure) • [Read Blog](https://yourcraft.page) • [Connect](https://linkedin.com/in/yourprofile)**
+**🔗 [View Project](https://github.com/marcus-singleton/homelab-infrastructure) • [Connect](https://linkedin.com/in/msingleton18)**
 
 *Last updated: January 2026*
 
 </div>
-
----
-
-**Remember to replace these placeholders before publishing:**
-- `yourusername` → your GitHub username
-- `your-domain.com` → your actual domain (or keep as example)
-- `192.168.1.x` → keep as generic example
-- `your-email@example.com` → your actual email
-- `Your Name` → your actual name
-- `yourcraft.page` → your actual Craft blog URL
-
 
