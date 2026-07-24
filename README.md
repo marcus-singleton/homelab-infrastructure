@@ -1,5 +1,7 @@
 # Homelab Infrastructure
 
+**[Portfolio & Case Studies](https://singletons.craft.me/resume_webpage)** · **[LinkedIn](https://www.linkedin.com/in/msingleton18)**
+
 Production-grade self-hosted infrastructure running real services for my household — with the same discipline I'd apply to a production SRE environment: defined SLOs, documented incident response, zero-trust secrets, and a monitoring stack built to catch problems before people do. Live and actively maintained since December 2024.
 
 ## Highlights
