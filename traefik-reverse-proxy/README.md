@@ -10,7 +10,7 @@
 
 *Enterprise-grade reverse proxy for home lab infrastructure*
 
-[Features](#-features) • [Quick Start](#-quick-start) • [Documentation](#-documentation) • [Architecture](#️-architecture)
+[Features](#-features) • [Quick Start](#-quick-start) • [Architecture](#️-architecture)
 
 </div>
 
@@ -146,12 +146,8 @@ cd homelab-infrastructure/traefik-reverse-proxy
 
 **2. Configure Secrets**
 ```bash
-# Install 1Password CLI
-# See: docs/01-prerequisites.md
-
-# Store Cloudflare API token in 1Password
-# Create service account
-# Configure op CLI
+# Install 1Password CLI, store the Cloudflare API token in 1Password,
+# create a Service Account, and configure the op CLI locally.
 ```
 
 **3. Customize Configuration**
@@ -191,16 +187,18 @@ cat certs/acme.json | jq '.cloudflare.Certificates[] | .domain.main'
 
 ## 📚 Documentation
 
+*Planned — not yet written. Sections below cover the same ground inline in the meantime (Quick Start, Common Issues, Adding New Services, Security).*
+
 | Document | Description |
 |----------|-------------|
-| [Prerequisites](docs/01-prerequisites.md) | Domain, DNS, 1Password setup |
-| [Installation Guide](docs/02-installation.md) | Complete step-by-step walkthrough |
-| [Configuration](docs/03-configuration.md) | Detailed config explanations |
-| [Adding Services](docs/04-adding-services.md) | How to add new services |
-| [Troubleshooting](docs/05-troubleshooting.md) | Common issues & solutions |
-| [Maintenance](docs/06-maintenance.md) | Day-2 operations guide |
-| [Architecture](docs/07-architecture.md) | Design decisions & diagrams |
-| [Security](docs/08-security.md) | Security best practices |
+| Prerequisites | Domain, DNS, 1Password setup |
+| Installation Guide | Complete step-by-step walkthrough |
+| Configuration | Detailed config explanations |
+| Adding Services | How to add new services |
+| Troubleshooting | Common issues & solutions |
+| Maintenance | Day-2 operations guide |
+| Architecture | Design decisions & diagrams |
+| Security | Security best practices |
 
 ---
 
@@ -231,8 +229,6 @@ cat certs/acme.json | jq '.cloudflare.Certificates[] | .domain.main'
 ---
 
 ## 🐛 Common Issues
-
-See [docs/05-troubleshooting.md](docs/05-troubleshooting.md) for detailed guide.
 
 **Quick Fixes:**
 
@@ -273,8 +269,6 @@ http:
 3. Wait 2 seconds (auto-reload)
 4. Access via HTTPS
 
-See [docs/04-adding-services.md](docs/04-adding-services.md) for details.
-
 ---
 
 ## 🔐 Security
@@ -293,8 +287,6 @@ See [docs/04-adding-services.md](docs/04-adding-services.md) for details.
 - [ ] WAF rules
 - [ ] Monitoring & alerting
 - [ ] Regular security audits
-
-See [docs/08-security.md](docs/08-security.md) for complete guide.
 
 ---
 
@@ -333,10 +325,7 @@ docker compose pull
 CF_DNS_API_TOKEN=$(op read "op://...") docker compose up -d
 
 # Backup configuration
-./scripts/backup.sh
 ```
-
-See [docs/06-maintenance.md](docs/06-maintenance.md) for complete guide.
 
 ---
 
@@ -371,11 +360,6 @@ See my [complete portfolio](https://github.com/marcus-singleton) for more projec
 
 <div align="center">
 
-**⭐ Star this repo if you found it helpful!**
-
 **🔗 [View Project](https://github.com/marcus-singleton/homelab-infrastructure) • [Connect](https://linkedin.com/in/msingleton18)**
 
-*Last updated: January 2026*
-
 </div>
-
