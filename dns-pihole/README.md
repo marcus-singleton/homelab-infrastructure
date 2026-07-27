@@ -136,6 +136,9 @@ UniFi → Settings → Networks → Home VLAN → DHCP/DNS → DNS Server: `<PI_
 nslookup google.com   # Server should return <PI_IP>
 ```
 
+Full step-by-step (Unbound tuning, blocklists, maintenance): see [docs/SETUP.md](./docs/SETUP.md)
+
+---
 
 ## 🎓 With This Project, I Practiced
 
