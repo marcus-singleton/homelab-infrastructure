@@ -1,6 +1,6 @@
 # Kubernetes Cluster
 
-**Status: Planned / in progress.** CKA passed 2026-07-16, which was the gate for this work — build starts now. This README describes the design; check back for implementation as it lands.
+**Status: Planned / in progress.** Building a K3s cluster with Flux CD GitOps — implementation starting now, with the CKA (passed 2026-07-16) as the entry gate that validated readiness for this work. This README describes the design; check back for implementation as it lands.
 
 ## Goal
 

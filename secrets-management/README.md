@@ -95,11 +95,19 @@ CF_DNS_API_TOKEN=$(op read "op://Traefik/Cloudflare DNS API Token/password") \
 ```
 
 
-## 🐛 A Real Lesson Learned
+## 🐛 Real Lessons Learned
+
+### Docker Doesn't Hot-Reload Environment Variables
 
 The first time this pattern hit production, fixing a broken token injection and running `docker compose restart` silently didn't pick up the new value — the service kept logging that the variable was unset. The cause: Docker bakes environment variables into a container at **creation**, not at **start**. `restart` restarts the same container with its original environment; only `docker compose down` followed by a fresh `up` (with the variable injected again) actually recreates it with the new value.
 
 A small, easy-to-miss distinction — and exactly the kind of thing that looks obvious in hindsight but costs real debugging time the first time a secret needs rotating in production.
+
+### Verifying AI-Assisted Troubleshooting Against Primary Sources
+
+Debugging a stalled `docker compose up` in this stack, an AI coding assistant confidently claimed that 1Password's `op run` doesn't resolve `op://` secret references from `.env` files, and proposed restructuring the config around that claim. Before implementing the change, I checked it against 1Password's own CLI documentation — the claim was wrong. `op run --env-file=.env -- <command>` does resolve `.env` references; the actual issue was a missing `--env-file` flag, not a fundamental limitation. Pushing back and verifying before acting caught what would have been an unnecessary architecture change.
+
+As AI-assisted troubleshooting becomes a standard part of the workflow, the differentiator isn't using the tools — it's verifying their output against primary sources before anything ships on top of it.
 
 
 ## 🎓 With This Project, I Practiced
