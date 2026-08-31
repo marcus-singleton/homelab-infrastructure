@@ -14,7 +14,7 @@ Run a K3s cluster on Proxmox with Flux CD managing deployments via GitOps — Gi
 | `k3s-worker1` | worker | 2 | 4 GB | `<LAB_VLAN>.202` |
 | `k3s-worker2` | worker | 2 | 4 GB | `<LAB_VLAN>.203` |
 
-Ubuntu 24.04 LTS on each node, K3s `v1.36.4+k3s1` (pinned, not an unversioned `curl \| sh`), single embedded-SQLite server (not HA — see the note in the setup runbook on what that means and how to change it later).
+Ubuntu 24.04 LTS on each node, K3s `v1.36.4+k3s1` (pinned, not an unversioned `curl | sh`), single embedded-SQLite server (not HA — see the note in the setup runbook on what that means and how to change it later).
 
 ```
 $ kubectl get nodes
