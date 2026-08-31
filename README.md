@@ -26,7 +26,7 @@ Production-grade self-hosted infrastructure running real services for my househo
 
 **Observability** — Prometheus scraping 8 exporters (Node, cAdvisor, UniFi Poller, Pi-hole, Traefik, Proxmox) at 30s intervals; Loki + Promtail for log aggregation (14-day retention); Grafana dashboards combining both data sources.
 
-**Kubernetes** — K3s cluster with Flux CD GitOps *(in progress)*.
+**Kubernetes** — 3-node K3s cluster on Proxmox, live and reboot-tested. Flux CD GitOps *(in progress)*.
 
 **Backup** — Restic, shipping offsite to S3.
 
@@ -37,7 +37,7 @@ Production-grade self-hosted infrastructure running real services for my househo
 ```
 homelab-infrastructure/
 ├── aws-infrastructure/      # AWS backups & cloud integration workflow (in progress)
-├── kubernetes-cluster/      # K3s cluster + Flux CD GitOps (in progress)
+├── kubernetes-cluster/      # K3s cluster (live) + Flux CD GitOps (in progress)
 ├── monitoring-stack/        # Prometheus + Grafana
 └── traefik-reverse-proxy/   # Traefik config + Let's Encrypt automation (documented — see its README)
 ```
@@ -48,7 +48,7 @@ Docker · Proxmox · Traefik · Prometheus · Grafana · Loki · Promtail · Pi-
 
 ## Status
 
-`traefik-reverse-proxy` is documented and production-ready. `monitoring-stack` is live. `kubernetes-cluster` and `aws-infrastructure` are active work in progress — scaffolding is in place, implementation is ongoing.
+`traefik-reverse-proxy` is documented and production-ready. `monitoring-stack` is live. `kubernetes-cluster`'s K3s cluster is live and reboot-tested; its Flux CD GitOps layer is still in progress. `aws-infrastructure` remains active work in progress — scaffolding is in place, implementation is ongoing.
 
 
 *Built to learn Site Reliability Engineering by doing it — every design decision follows a framework around Security, Observability, Resiliency, Automation, Portability, and Reachability.*
