@@ -15,7 +15,7 @@ Production-grade self-hosted infrastructure running real services for my househo
 ## Recent Writing
 
 - [Standing Up My Personal Media Server - Debugging Docker Desktop's macOS Mount Layer](https://www.linkedin.com/pulse/standing-up-my-personal-media-server-debugging-docker-singleton-oleac) — an eight-step root-cause chain through Docker Desktop's virtualized mount layer, and the native reinstall that fixed it for good.
-- [Lessons from my CKA prep and Exam](https://www.linkedin.com/pulse/lessons-from-my-cka-prep-exam-marcus-singleton-k89bc) — what a two-point exam miss exposed about untested Kubernetes gaps, and closing them for a 90% retake.
+- [Lessons from my CKA prep and Exam](https://www.linkedin.com/pulse/lessons-from-my-cka-prep-exam-marcus-singleton-k89bc) — what a two-point exam miss exposed about untested Kubernetes gaps, and closing them on the retake.
 
 ## Architecture
 
