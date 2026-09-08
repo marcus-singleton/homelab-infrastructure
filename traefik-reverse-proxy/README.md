@@ -6,9 +6,9 @@
 ![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker)
 ![Let's Encrypt](https://img.shields.io/badge/Let's_Encrypt-Automated-green)
 ![1Password](https://img.shields.io/badge/1Password-Secrets-blue?logo=1password)
-![Status](https://img.shields.io/badge/Status-Production-success)
+![Status](https://img.shields.io/badge/Status-Live-success)
 
-*Enterprise-grade reverse proxy for home lab infrastructure*
+*A carefully engineered reverse proxy for home lab infrastructure*
 
 [Features](#-features) • [Quick Start](#-quick-start) • [Architecture](#️-architecture)
 
@@ -18,7 +18,7 @@
 
 ## 🎯 Project Overview
 
-This project implements a production-ready reverse proxy using Traefik that provides:
+This project implements a fully documented reverse proxy using Traefik that provides:
 - ✅ Automated HTTPS certificates (Let's Encrypt)
 - ✅ Zero-trust secrets management (1Password)
 - ✅ File-based routing configuration
@@ -98,8 +98,8 @@ This architecture mirrors production environments:
 **Key Design Decisions:**
 - **DNS-01 Challenge**: Enables certificates for private services
 - **File-Based Config**: Explicit, version-controllable, educational
-- **Edge Node Architecture**: Production-ready pattern
-- **1Password Integration**: Enterprise secrets management
+- **Edge Node Architecture**: Live, actively maintained pattern
+- **1Password Integration**: Zero-trust secrets management
 
 ---
 
@@ -217,7 +217,7 @@ cat certs/acme.json | jq '.cloudflare.Certificates[] | .domain.main'
 - Secrets management best practices
 - Documentation as part of development
 - Troubleshooting methodologies
-- Production-ready architecture
+- Operationally disciplined architecture
 
 **Problem Solving:**
 - DNS resolution debugging
@@ -348,7 +348,7 @@ CF_DNS_API_TOKEN=$(op read "op://...") docker compose up -d
 **Built as part of my DevOps learning journey.**
 
 This project demonstrates:
-- Production-ready architecture patterns
+- Real-world architecture discipline
 - Security best practices
 - Documentation skills
 - Problem-solving ability

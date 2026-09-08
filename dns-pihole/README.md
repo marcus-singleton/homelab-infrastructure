@@ -5,7 +5,7 @@
 ![Pi-hole](https://img.shields.io/badge/Pi--hole-DNS_Sinkhole-red?logo=pihole)
 ![Unbound](https://img.shields.io/badge/Unbound-Recursive_Resolver-blue)
 ![Raspberry Pi](https://img.shields.io/badge/Raspberry_Pi-5-C51A4A?logo=raspberrypi)
-![Status](https://img.shields.io/badge/Status-Production-success)
+![Status](https://img.shields.io/badge/Status-Live-success)
 
 *Privacy-first, ad-blocking DNS for the home network — no third-party resolver in the loop*
 

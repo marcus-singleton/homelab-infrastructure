@@ -6,7 +6,7 @@
 ![Grafana](https://img.shields.io/badge/Grafana-Dashboards-F46800?logo=grafana)
 ![Loki](https://img.shields.io/badge/Loki-Log_Aggregation-blue?logo=grafana)
 ![1Password](https://img.shields.io/badge/1Password-Secrets-blue?logo=1password)
-![Status](https://img.shields.io/badge/Status-Production-success)
+![Status](https://img.shields.io/badge/Status-Live-success)
 
 *Monitoring infrastructure that survives the failures it's designed to detect*
 

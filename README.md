@@ -2,7 +2,7 @@
 
 **[Portfolio & Case Studies](https://singletons.craft.me/resume_webpage)** · **[LinkedIn](https://www.linkedin.com/in/msingleton18)**
 
-Production-grade self-hosted infrastructure running real services for my household — with the same discipline I'd apply to a production SRE environment: defined SLOs, documented incident response, zero-trust secrets, and a monitoring stack built to catch problems before people do. Live and actively maintained since December 2024.
+Self-hosted infrastructure running real services for my household — held to the same discipline I'd apply to a production SRE environment: defined SLOs, documented incident response, zero-trust secrets, and a monitoring stack built to catch problems before people do. Live and actively maintained since December 2024.
 
 ## Highlights
 
@@ -47,7 +47,7 @@ Docker · Proxmox · Traefik · Prometheus · Grafana · Loki · Promtail · Pi-
 
 ## Status
 
-`traefik-reverse-proxy` is documented and production-ready. `monitoring-stack` is live. `kubernetes-cluster`'s K3s cluster is live and reboot-tested; its Flux CD GitOps layer is still in progress. `aws-infrastructure` remains active work in progress — scaffolding is in place, implementation is ongoing.
+`traefik-reverse-proxy` is fully documented and actively maintained. `monitoring-stack` is live. `kubernetes-cluster`'s K3s cluster is live and reboot-tested; its Flux CD GitOps layer is still in progress. `aws-infrastructure` remains active work in progress — scaffolding is in place, implementation is ongoing.
 
 
 *Built to learn Site Reliability Engineering by doing it — every design decision follows a framework around Security, Observability, Resiliency, Automation, Portability, and Reachability.*

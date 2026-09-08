@@ -4,7 +4,7 @@
 
 ![1Password](https://img.shields.io/badge/1Password-Secrets-blue?logo=1password)
 ![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker)
-![Status](https://img.shields.io/badge/Status-Production-success)
+![Status](https://img.shields.io/badge/Status-Live-success)
 
 *No credential ever touches a config file — every secret is a runtime pointer, not a hardcoded value*
 
@@ -99,9 +99,9 @@ CF_DNS_API_TOKEN=$(op read "op://Traefik/Cloudflare DNS API Token/password") \
 
 ### Docker Doesn't Hot-Reload Environment Variables
 
-The first time this pattern hit production, fixing a broken token injection and running `docker compose restart` silently didn't pick up the new value — the service kept logging that the variable was unset. The cause: Docker bakes environment variables into a container at **creation**, not at **start**. `restart` restarts the same container with its original environment; only `docker compose down` followed by a fresh `up` (with the variable injected again) actually recreates it with the new value.
+The first time this pattern hit real use, fixing a broken token injection and running `docker compose restart` silently didn't pick up the new value — the service kept logging that the variable was unset. The cause: Docker bakes environment variables into a container at **creation**, not at **start**. `restart` restarts the same container with its original environment; only `docker compose down` followed by a fresh `up` (with the variable injected again) actually recreates it with the new value.
 
-A small, easy-to-miss distinction — and exactly the kind of thing that looks obvious in hindsight but costs real debugging time the first time a secret needs rotating in production.
+A small, easy-to-miss distinction — and exactly the kind of thing that looks obvious in hindsight but costs real debugging time the first time a secret needs rotating for real.
 
 ### Verifying AI-Assisted Troubleshooting Against Primary Sources
 
