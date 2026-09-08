@@ -9,6 +9,7 @@ Production-grade self-hosted infrastructure running real services for my househo
 - **MTTR:** 30 min → under 5 min
 - **Operational toil:** 10+ hrs/week → under 2 hrs/week (automated SSL renewal, updates, backups, health checks)
 - **Availability:** 100% during DNS maintenance windows (Pi-hole failover)
+- **Reliability:** 99.9% availability SLO tracked via a custom PromQL dashboard, with error-budget calculation
 - **Observability:** Prometheus + 8 exporters across 3 hosts, Loki log aggregation, Grafana unified dashboards
 
 ## Recent Writing
@@ -28,9 +29,7 @@ Production-grade self-hosted infrastructure running real services for my househo
 
 **Kubernetes** — 3-node K3s cluster on Proxmox, live and reboot-tested. Flux CD GitOps *(in progress)*.
 
-**Backup** — Restic, shipping offsite to S3.
-
-**Cloud** — AWS backup/cloud-integration workflow *(in progress)*.
+**Backup** — Restic to S3 planned; IAM/bucket provisioning is the next open task *(in progress)*.
 
 ## Repository Structure
 
@@ -38,7 +37,7 @@ Production-grade self-hosted infrastructure running real services for my househo
 homelab-infrastructure/
 ├── aws-infrastructure/      # AWS backups & cloud integration workflow (in progress)
 ├── kubernetes-cluster/      # K3s cluster (live) + Flux CD GitOps (in progress)
-├── monitoring-stack/        # Prometheus + Grafana
+├── monitoring-stack/        # Distributed Prometheus/Grafana/Loki stack with SLO tracking
 └── traefik-reverse-proxy/   # Traefik config + Let's Encrypt automation (documented — see its README)
 ```
 
